@@ -34,7 +34,7 @@ pair<int, int> buttonPressed(char player) {//this function allows player to sele
 	while (true) {
 		if (_kbhit()) {
 			key = _getch();
-			if (key >= '0' && key <= '9') {
+			if (key >= '1' && key <= '9') {
 
 				indexX = ((key - '0') - 1) % 3;
 				indexY = ((key - '0') - 1) / 3;
@@ -107,6 +107,8 @@ int main() {
 	while (continuePlaying) {
 		for (int move = 0; move < 9; move++) {
 			system("cls"); // clearing console
+
+			cout << "Press keys 1-9 of your keyboard to select a cell." << endl;
 
 			drawGrid();
 
