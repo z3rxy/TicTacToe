@@ -39,7 +39,7 @@ pair<int, int> buttonPressed(char player) {//this function allows player to sele
 				indexX = ((key - '0') - 1) % 3;
 				indexY = ((key - '0') - 1) / 3;
 
-				if (grid[indexY][indexX] != 'X' || grid[indexY][indexX] != 'O') {//checks if the cell is already occupied
+				if (grid[indexY][indexX] != 'X' && grid[indexY][indexX] != 'O') {//checks if the cell is already occupied
 					grid[indexY][indexX] = player;
 					return make_pair(indexX, indexY);
 				}
